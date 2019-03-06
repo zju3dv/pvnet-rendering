@@ -46,3 +46,13 @@ python run.py --type rendering
 python run.py --type fuse
 ```
 
+### Examples
+
+Blender rendering
+
+![blender](./assets/blender.png)
+
+Fusion
+
+![fusion](./assets/fuse.png)
+
