@@ -326,7 +326,7 @@ linemod_cls_names=['ape','cam','cat','duck','glue','iron','phone', 'benchvise','
 
 
 def run():
-    output_dir='tmp/'
+    output_dir='./data/LINEMOD/fuse/'
     linemod_dir=cfg.LINEMOD
     linemod_orig_dir=cfg.LINEMOD_ORIG
     background_dir=os.path.join(cfg.SUN, "JPEGImages")
