@@ -13,7 +13,7 @@ Download the LINEMOD_ORIG, which can be found at [here](http://campar.in.tum.de/
 Download the SUN397
 
 ```
-wget http://groups.csail.mit.edu/vision/SUN/releases/SUN2012.tar.gz
+wget http://groups.csail.mit.edu/vision/SUN/releases/SUN2012pascalformat.tar.gz
 ```
 
 ### Create the soft link
