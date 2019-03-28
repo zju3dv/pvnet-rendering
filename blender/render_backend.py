@@ -17,7 +17,7 @@ sys.path.append(LIB_DIR)
 sys.path.append(ROOT_DIR)
 
 from config import cfg
-from rendering.blender.blender_utils import get_K_P_from_blender, get_3x4_P_matrix_from_blender
+from blender.blender_utils import get_K_P_from_blender, get_3x4_P_matrix_from_blender
 import pickle
 import time
 

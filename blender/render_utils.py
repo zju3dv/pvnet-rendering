@@ -1,5 +1,5 @@
-from rendering.config import cfg
-from rendering.base_utils import PoseTransformer, read_pose, read_pickle, save_pickle
+from config import cfg
+from base_utils import PoseTransformer, read_pose, read_pickle, save_pickle
 import os
 import numpy as np
 from transforms3d.quaternions import mat2quat
@@ -263,7 +263,7 @@ class Renderer(object):
     def multi_thread_render():
         # objects = ['ape', 'benchvise', 'bowl', 'can', 'cat', 'cup', 'driller', 'duck',
         #            'glue', 'holepuncher', 'iron', 'lamp', 'phone', 'cam', 'eggbox']
-        objects = ['duck', 'lamp', 'phone', 'cam', 'eggbox']
+        objects = ['lamp', 'phone']
 
         def render(class_type):
             renderer = Renderer(class_type)
