@@ -4,7 +4,7 @@
 
 Download the LINEMOD, which can be found at [here](https://1drv.ms/u/s!AtZjYZ01QjphgQ56t4wCharVSfxL).
 
-Download the LINEMOD_ORIG, which can be found at [here](./tools/download_linemod_orig.sh).
+Download the LINEMOD_ORIG, which can be found at [here](./download_linemod_orig.sh).
 
 Download the SUN397
 
