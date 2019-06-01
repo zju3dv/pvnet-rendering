@@ -2,13 +2,9 @@
 
 ### Prepare the dataset
 
-Download the LINEMOD
+Download the LINEMOD, which can be found at [here](https://1drv.ms/u/s!AtZjYZ01QjphgQ56t4wCharVSfxL).
 
-```
-wget -O LINEMOD.tar --no-check-certificate "https://onedrive.live.com/download?cid=05750EBEE1537631&resid=5750EBEE1537631%21135&authkey=AJRHFmZbcjXxTmI"
-```
-
-Download the LINEMOD_ORIG, which can be found at [here](http://campar.in.tum.de/Main/StefanHinterstoisser).
+Download the LINEMOD_ORIG, which can be found at [here](./tools/download_linemod_orig.sh).
 
 Download the SUN397
 
