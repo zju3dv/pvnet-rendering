@@ -386,7 +386,6 @@ def batch_render_with_linemod(args, camera):
         world_to_camera_pose = np.dot(world_to_camera_pose, object_to_world_pose)[:3]
         with open('{}/{}_RT.pkl'.format(args.output_dir, i), 'wb') as f:
             pickle.dump({'RT': world_to_camera_pose, 'K': KRT['K']}, f)
-
         bpy.data.images.remove(bpy.data.images[img_name])
 
 
