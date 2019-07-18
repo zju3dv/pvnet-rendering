@@ -12,6 +12,7 @@ def get_calibration_matrix_K_from_blender(camera):
     resolution_y_in_px = scene.render.resolution_y
     scale = scene.render.resolution_percentage / 100
     sensor_width_in_mm = camera.sensor_width
+    sensor_height_in_mm = camera.sensor_height
     pixel_aspect_ratio = scene.render.pixel_aspect_x / scene.render.pixel_aspect_y
 
     if camera.sensor_fit == 'VERTICAL':
