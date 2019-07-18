@@ -3,6 +3,8 @@ from mathutils import Matrix
 import numpy as np
 
 
+# we could also define the camera matrix
+# https://blender.stackexchange.com/questions/38009/3x4-camera-matrix-from-blender-camera
 def get_calibration_matrix_K_from_blender(camera):
     f_in_mm = camera.lens
     scene = bpy.context.scene
@@ -16,11 +18,12 @@ def get_calibration_matrix_K_from_blender(camera):
         # the sensor height is fixed (sensor fit is horizontal),
         # the sensor width is effectively changed with the pixel aspect ratio
         s_u = resolution_x_in_px * scale / sensor_width_in_mm / pixel_aspect_ratio
+        s_v = resolution_y_in_px * scale / sensor_height_in_mm
     else:  # 'HORIZONTAL' and 'AUTO'
         # the sensor width is fixed (sensor fit is horizontal),
         # the sensor height is effectively changed with the pixel aspect ratio
-        pixel_aspect_ratio = scene.render.pixel_aspect_x / scene.render.pixel_aspect_y
         s_u = resolution_x_in_px * scale / sensor_width_in_mm
+        s_v = resolution_y_in_px * scale * pixel_aspect_ratio / sensor_height_in_mm
 
     # Parameters of intrinsic calibration matrix K
     alpha_u = f_in_mm * s_u

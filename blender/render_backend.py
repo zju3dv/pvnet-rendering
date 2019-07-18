@@ -94,6 +94,10 @@ def setup():
     bpy.context.scene.render.alpha_mode = 'TRANSPARENT'
     bpy.context.scene.render.image_settings.color_mode = 'RGBA'
 
+    # modify the camera intrinsic matrix
+    # bpy.data.cameras['Camera'].sensor_width = 39.132693723430386
+    # bpy.context.scene.render.pixel_aspect_y = 1.6272340492401836
+
     cam_constraint = camera.constraints.new(type='TRACK_TO')
     cam_constraint.track_axis = 'TRACK_NEGATIVE_Z'
     cam_constraint.up_axis = 'UP_Y'
@@ -435,10 +439,11 @@ def batch_render_ycb(args, camera):
         rotation = euler2mat(azi, ele, theta)
         object_to_world_pose = np.concatenate([rotation, [[x], [y], [0]]], axis=-1)
         object_to_world_pose = np.append(object_to_world_pose, [[0, 0, 0, 1]], axis=0)
-        world_to_camera_pose = np.append(get_K_P_from_blender(camera)['RT'], [[0, 0, 0, 1]], axis=0)
+        KRT = get_K_P_from_blender(camera)
+        world_to_camera_pose = np.append(KRT['RT'], [[0, 0, 0, 1]], axis=0)
         world_to_camera_pose = np.dot(world_to_camera_pose, object_to_world_pose)[:3]
         with open('{}/{}_RT.pkl'.format(args.output_dir, i), 'wb') as f:
-            pickle.dump({'RT': world_to_camera_pose}, f)
+            pickle.dump({'RT': world_to_camera_pose, 'K': KRT['K']}, f)
         bpy.data.images.remove(bpy.data.images[img_name])
 
 
