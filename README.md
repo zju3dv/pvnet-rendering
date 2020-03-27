@@ -2,9 +2,9 @@
 
 ### Prepare the dataset
 
-Download the LINEMOD, which can be found at [here](https://1drv.ms/u/s!AtZjYZ01QjphgQ56t4wCharVSfxL).
+Download the LINEMOD, which can be found at [here](https://zjueducn-my.sharepoint.com/:u:/g/personal/pengsida_zju_edu_cn/EXK2K0B-QrNPi8MYLDFHdB8BQm9cWTxRGV9dQgauczkVYQ?e=beftUz).
 
-Download the LINEMOD_ORIG, which can be found at [here](./download_linemod_orig.sh).
+Download the LINEMOD_ORIG, which can be found at [here](https://zjueducn-my.sharepoint.com/:u:/g/personal/pengsida_zju_edu_cn/EaoGIPguY3FAgrFKKhi32fcB_nrMcNRm8jVCZQd7G_-Wbg?e=ig4aHk).
 
 Download the SUN397
 
